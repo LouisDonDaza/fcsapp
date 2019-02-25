@@ -1,0 +1,55 @@
+.cardlist{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.myCard{
+	margin: 5px 15px;
+	width: 275px;
+	height: 200px;
+	border: 2px solid black;
+	color: rgb(0,0,0);
+}
+.red--card{
+	background-color: rgb(219,40,40);
+}
+.orange--card{
+	background-color: rgb(242,113,28);
+}
+.yellow--card{
+	background-color: rgb(251,189,8);
+}
+.green--card{
+	background-color: rgb(33,186,69);
+}
+.olive--card{
+	background-color: rgb(181,204,24);
+}
+.blue--card{
+	background-color: rgb(33,133,208);
+}
+.violet--card{
+	background-color: rgb(100,53,201);
+}
+.purple--card{
+	background-color: rgb(163,51,200);
+}
+.pink--card{
+	background-color: rgb(224,57,151);
+}
+/*
+red - #db2828 rgb(219,40,40)
+orange - #f2711c rgb(242,113,28)
+yellow - #fbbd08 rgb(251,189,8)
+olive - #b5cc18 rgb(181,204,24)
+green - #21ba45 rgb(33,186,69)
+teal - #00b5ad rgb(0,181,173)
+blue - #2185d0 rgb(33,133,208)
+violet- #6435c9 rgb(100,53,201)
+purple - #a333c8 rgb(163,51,200)
+pink - #e03997 rgb(224,57,151)
+brown -#a5673f rgb(165,103,63)
+grey - #767676 rgb(118,118,118)
+*/ 
