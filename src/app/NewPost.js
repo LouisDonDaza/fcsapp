@@ -121,13 +121,18 @@ class NewPost extends React.Component {
 		}
 	}
 	render(){
-		const {open} = this.state;
+		if(this.props.auth.authorization.length){
+			const {open} = this.state;
 		return(
 			<div>
 				<Button open={open} color="teal" onClick={this.handleOpen}>New Post<i className="magic icon right aligned"></i></Button>
 				{this.renderModals()}
 			</div>
 		);
+	}else{
+		return null;
+		
+	}
 	}
 }
 const mapStateToProps = state => {

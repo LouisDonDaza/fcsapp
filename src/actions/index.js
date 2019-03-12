@@ -8,7 +8,7 @@ export const saveToken = data => async dispatch => {
 	localStorage.setItem('lastName', data.user.lastName);
 	dispatch({type: 'USER_INFO', payload: data.user})
 	dispatch({type: 'TOKEN', payload: data.token})
-	history.push('/');
+	history.push('/fcsapp');
 }
 export const signOut = () => {
 	history.push('/');
