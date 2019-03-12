@@ -1,8 +1,9 @@
 import React from 'react';
-import {Button, Form, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+
+import {Button, Form, Segment } from 'semantic-ui-react';
 import { saveToken } from 'actions';
-class Signin extends React.Component {
+class Login extends React.Component {
 	state={errMsg: ""}
 	handleChange = (e, {name, value}) => {
 		this.setState({[name]: value});
@@ -32,7 +33,7 @@ class Signin extends React.Component {
 	}
 	render(){
 		return(
-		<Segment inverted>
+		<Segment className="mt-3" inverted style={{width:'auto'}}>
 	    <Form inverted onSubmit={this.handleSubmit}>
 	      <Form.Group>
 	      	<Form.Input fluid label='Email' placeholder='Email' name='email' width={8} onChange={this.handleChange}/>
@@ -46,5 +47,5 @@ class Signin extends React.Component {
 	  </Segment>
 	);
 	}
-};
-export default connect(null, {saveToken})(Signin);
+}
+export default connect(null, {saveToken})(Login);

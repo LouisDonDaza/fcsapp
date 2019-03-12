@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from 'semantic-ui-react';
 import {connect} from 'react-redux';
-import {saveToken} from '../actions';
+import {saveToken} from 'actions';
 class Landing extends React.Component {
 	handleDemo = async (email, password)  => {
 		const res = await fetch('https://skillshareapi.herokuapp.com/signin', {

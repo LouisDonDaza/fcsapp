@@ -1,5 +1,5 @@
 import React from 'react';
-import requireAuth from './requireAuth';
+import requireAuth from 'components/requireAuth';
 import {connect} from  'react-redux';
 class Account extends React.Component {
 	state={user: null, posts: null};

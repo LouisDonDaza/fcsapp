@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Input } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {signOut }from '../actions';
+import {signOut }from 'actions';
 class Header extends React.Component {
 	renderSignin(){
 		const {authorization, user} = this.props.auth;

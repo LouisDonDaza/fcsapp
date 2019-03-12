@@ -6,3 +6,6 @@ export const grantAccess = axios.create({
     return status < 400; // default
  	}
 })
+export const myAPI = axios.create({
+	baseURL: 'https://skillshareapi.herokuapp.com'
+})

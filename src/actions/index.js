@@ -1,12 +1,14 @@
 import history from '../history';
+import {myAPI} from 'api';
+
 export const saveToken = data => async dispatch => {
 	localStorage.setItem('token', data.token)
-	localStorage.setItem('Organization', data.user.Organization);
 	localStorage.setItem('firstName', data.user.firstName);
 	localStorage.setItem('_id', data.user._id);
+	localStorage.setItem('lastName', data.user.lastName);
 	dispatch({type: 'USER_INFO', payload: data.user})
 	dispatch({type: 'TOKEN', payload: data.token})
-	history.push('/feed');
+	history.push('/');
 }
 export const signOut = () => {
 	history.push('/');
@@ -16,14 +18,16 @@ export const signOut = () => {
 	localStorage.removeItem('_id');
 	return({type: 'SIGN_OUT'});
 }
-export const fetchPosts = () => async (dispatch, getState) => {
-	const {authorization} = getState().auth;
-	const res = await fetch('https://skillshareapi.herokuapp.com/posts', {
-		method: 'GET',
-		headers: {authorization}
-	});
-	const data = await res.json()
-	dispatch({type:'FETCH_FEED', payload: data});
+export const fetchPosts = (query) => async (dispatch) => {
+	// const {authorization} = getState().auth;
+	// const res = await fetch('https://skillshareapi.herokuapp.com/posts', {
+	// 	method: 'GET',
+	// 	headers: {authorization}
+	// });
+	// const data = await res.json()
+	console.log(query);
+	const response = await myAPI.get(`/posts${query}`)
+	dispatch({type:'FETCH_FEED', payload: response['data']});
 }
 export const deletePost = PostID => async (dispatch, getState) =>{
 	const {authorization} = getState().auth;
@@ -75,4 +79,8 @@ export const close = () => {
 }
 export const editPost = (post) => {
 	return {type: 'EDIT_POST', payload: post};
+}
+export const fetchSubject = () => async (dispatch, getState) =>{
+	const subjects = await myAPI.get('/subject')
+	dispatch({type: 'FETCH_SUBJECT', payload: subjects['data']});
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Form, Segment } from 'semantic-ui-react';
-import {saveToken } from '../actions';
+import {saveToken } from 'actions';
 import { connect } from 'react-redux';
 class Register extends React.Component{
 	state = {

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/style.css';
+import 'css/style.css';
 import { connect } from 'react-redux';
-import {editPost} from '../actions';
+import {editPost} from 'actions';
 
 class Card extends React.Component {
 	renderButtons = post => {

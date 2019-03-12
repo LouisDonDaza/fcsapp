@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {grantAccess} from '../api';
+import {grantAccess} from 'api';
 
 export default ChildComponent => {
 	class ComposedComponent extends React.Component {

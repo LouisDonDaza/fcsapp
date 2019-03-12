@@ -1,8 +1,8 @@
 import React from 'react';
 import {Menu, Button} from 'semantic-ui-react';
 import {connect} from 'react-redux';
-import CardForm from './CardForm';
-import { open } from '../actions';
+import CardForm from 'components/CardForm';
+import { open } from 'actions';
 class FeedMenu extends React.Component {
 	state = { activeItem: 'home'}
   	handleItemClick = (e, { name, importance }) => {

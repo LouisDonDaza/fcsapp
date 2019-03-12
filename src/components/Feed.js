@@ -1,10 +1,10 @@
 import React from 'react';
-import requireAuth from './requireAuth';
-import FeedMenu from './FeedMenu';
+import requireAuth from 'components/requireAuth';
+import FeedMenu from 'components/FeedMenu';
 import { connect } from 'react-redux';
-import {fetchPosts, deletePost} from '../actions';
+import {fetchPosts, deletePost} from 'actions';
 import { Button, Header, Icon, Modal } from 'semantic-ui-react';
-import Card from './Card';
+import Card from 'components/Card';
 class Feed extends React.Component {
 	state = {open: false, post: {}, filteredFetch: []}
 	handleOpen = post => this.setState({open: true, post})

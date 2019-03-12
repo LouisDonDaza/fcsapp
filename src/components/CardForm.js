@@ -1,7 +1,7 @@
 import React from 'react';
 import {Modal, Form, Button, Select} from 'semantic-ui-react';
 import {connect } from 'react-redux';
-import {close , fetchPosts} from '../actions';
+import {close , fetchPosts} from 'actions';
 class CardForm extends React.Component {
 	state = {Type: 0, Input: "", Title: "", touched: false};
 	handleChange = (e, {name, value}) => {

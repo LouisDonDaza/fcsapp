@@ -1,13 +1,13 @@
 import React from 'react';
 import { Router, Route} from 'react-router-dom';
 import history from '../history';
-import Landing from './Landing';
-import Signin from './Signin';
-import Register from './Register';
-import Header from './Header';
-import Feed from './Feed';
-import SearchUser from './SearchUser';
-import Account from './Account';
+import Landing from 'components/Landing';
+import Signin from 'components/Signin';
+import Register from 'components/Register';
+import Header from 'components/Header';
+import Feed from 'components/Feed';
+import SearchUser from 'components/SearchUser';
+import Account from 'components/Account';
 class App extends React.Component {
 	render(){
 		return(

@@ -2,8 +2,8 @@ import React from 'react';
 import {Card, Button} from 'semantic-ui-react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {followUser, unFollowUser} from '../actions';
-import requireAuth from './requireAuth';
+import {followUser, unFollowUser} from 'actions';
+import requireAuth from 'components/requireAuth';
 
 class SearchUser extends React.Component {
 	state = {fetched: [], filterFetched: [], fetchedUser: {}}

@@ -6,136 +6,84 @@ const INITIAL_AUTH = {
 		following: []
 	}
 }
-const INITIAL_SETTINGS = {
-	Work: [
-		{
-			color: 'green',
-			key: 'done',
-			value: 0,
-			text: 'Done'
-		},
-		{
-			color: 'pink',
-			key: 'new',
-			value: 1,
-			text: 'New'
-		},
-		{
-			color: 'olive',
-			key: 'important',
-			value: 2,
-			text: 'Important'
-		},
-		{
-			color: 'yellow',
-			key: 'Upcoming Deadline',
-			value: 3,
-			text: 'Upcoming Deadline'
-		},
-		{
-			color: 'red',
-			key: 'overdue',
-			value: 4,
-			text: 'Overdue'
-		}
-	],
-	Community: [
-		{
-			color: 'green',
-			key: 'Garden',
-			value: 0,
-			text: 'Garden'
-		},
-		{
-			color: 'pink',
-			key: 'Arts & Craft',
-			value: 1,
-			text: 'Arts & Craft'
-		},
-		{
-			color: 'olive',
-			key: 'Logistics',
-			value: 2,
-			text: 'Logistics'
-		},
-		{
-			color: 'yellow',
-			key: 'Community Service',
-			value: 3,
-			text: 'Community Service'
-		},
-		{
-			color: 'red',
-			key: 'Cafeteria',
-			value: 4,
-			text: 'Cafeteria'
-		}
-	],
-	HighSchool:[
-		{
-			color: 'green',
-			key: 'maths',
-			value: 0,
-			text: 'Maths'
-		},
-		{
-			color: 'pink',
-			key: 'history',
-			value: 1,
-			text: 'History'
-		},
-		{
-			color: 'olive',
-			key: 'science',
-			value: 2,
-			text: 'Science'
-		},
-		{
-			color: 'yellow',
-			key: 'english',
-			value: 3,
-			text: 'English'
-		},
-		{
-			color: 'red',
-			key: 'physical education',
-			value: 4,
-			text: 'Physical Education'
-		}
-	],
-	College:[
-		{
-			color: 'green',
-			key: 'calculus',
-			value: 0,
-			text: 'Calculus'
-		},
-		{
-			color: 'pink',
-			key: 'history',
-			value: 1,
-			text: 'History'
-		},
-		{
-			color: 'olive',
-			key: 'physics',
-			value: 2,
-			text: 'Physics'
-		},
-		{
-			color: 'yellow',
-			key: 'english',
-			value: 3,
-			text: 'English'
-		},
-		{
-			color: 'red',
-			key: 'chemistry',
-			value: 4,
-			text: 'Chemistry'
-		}
-	]
-}
+const INITIAL_SUBJECT = [
+    {
+        "subcategories": [],
+        "imageURL": "https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "bgColor": "#000",
+        "_id": "5c7c21e128f9053cd845bb4f",
+        "name": "Physics",
+        "description": "The study of Physics",
+        "code": 1,
+        "subcatdesc": [],
+        "__v": 0
+    },
+    {
+        "subcategories": [
+            350
+        ],
+        "imageURL": "https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "bgColor": "#000",
+        "_id": "5c7c21ed28f9053cd845bb50",
+        "name": "Biology",
+        "description": "The study of Biology",
+        "code": 2,
+        "subcatdesc": [
+            {
+                "_id": "5c7c64972dcb1840f87d40ee",
+                "category": 350,
+                "description": "The study of carbon compounds",
+                "name": "Organic Chemistry"
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "subcategories": [],
+        "imageURL": "https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "bgColor": "#000",
+        "_id": "5c7c65a4f0eb650edc8c9694",
+        "name": "Chemistry",
+        "description": "The study of Chemistry",
+        "code": 3,
+        "subcatdesc": [],
+        "__v": 0
+    },
+    {
+        "subcategories": [],
+        "imageURL": "https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "bgColor": "#000",
+        "_id": "5c7c69f4d1d0ac30c8f3b108",
+        "name": "Math",
+        "description": "The study of Math",
+        "code": 4,
+        "subcatdesc": [],
+        "__v": 0
+    },
+    {
+        "subcategories": [],
+        "imageURL": "https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "bgColor": "#000",
+        "_id": "5c7c6a34d1d0ac30c8f3b109",
+        "name": "History",
+        "description": "The study of History",
+        "code": 5,
+        "subcatdesc": [],
+        "__v": 0
+    },
+    {
+        "subcategories": [],
+        "imageURL": "https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "bgColor": "#123",
+        "_id": "5c7c6ac24e12b30dd438c36a",
+        "name": "Geography",
+        "description": "The study of Geography",
+        "code": 6,
+        "subcatdesc": [],
+        "__v": 0
+    }
+]
+
 const INITIAL_MODAL = {
 	open: false,
 	edit: false,
@@ -165,14 +113,6 @@ const feedReducer = (state = [], action) => {
 			return state;
 	}
 }
-const settingsReducer = (state=INITIAL_SETTINGS, action)=>{
-	switch(action.type){
-		case 'DUMMY':
-			return action.payload;
-		default:
-			return state;
-	}
-}
 const modalReducer = (state=INITIAL_MODAL, action) =>{
 	switch(action.type){
 		case 'OPEN':
@@ -185,9 +125,17 @@ const modalReducer = (state=INITIAL_MODAL, action) =>{
 			return state;
 	}
 }
+const subjectReducer = (state=INITIAL_SUBJECT, action) => {
+	switch(action.type){
+		case 'FETCH_SUBJECT':
+			return [...action.payload];
+		default:
+			return state;
+	}
+}
 export default combineReducers({
 	auth: authReducer,
 	feed: feedReducer,
-	settings: settingsReducer,
-	modal: modalReducer
+	modal: modalReducer,
+	subject: subjectReducer
 })
