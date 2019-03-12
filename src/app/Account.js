@@ -34,7 +34,7 @@ class Account extends React.Component {
 	}
 	redirect() {
 		setTimeout(()=>{
-				history.push('/');
+				history.push('/fcsapp');
 			}, 3000);
 	}
 	userFound = () => {

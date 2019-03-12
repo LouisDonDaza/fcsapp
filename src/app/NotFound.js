@@ -3,7 +3,7 @@ import history from '../history';
 class NotFound extends React.Component {
 	componentDidMount(){
 		setTimeout(()=>{
-			history.push('/');
+			history.push('/fcsapp');
 		}, 5000);
 	}
 	render(){

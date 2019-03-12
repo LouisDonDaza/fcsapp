@@ -63,7 +63,7 @@ class Header extends React.Component {
 		}
 		return(
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-				<Link to="/" className="navbar-brand ml-lg-5 ml-sm-3">
+				<Link to="/fcsapp" className="navbar-brand ml-lg-5 ml-sm-3">
 					<a onClick={()=>{this.toggleLink(-1)}}>wisDOM</a>
 				</Link>
 				

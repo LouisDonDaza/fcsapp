@@ -28,7 +28,7 @@ class App extends React.Component {
 					<div>
 						<Header/>
 						<div className="container">
-						<Route path="/" exact component={Home}/>
+						<Route path="/fcsapp" exact component={Home}/>
 						<Route path="/trending" exact component={Trending}/>
 						<Route path="/account" exact component={Account}/>
 						<Route path="/subject" exact component={Subject}/>
